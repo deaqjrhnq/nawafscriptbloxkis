@@ -1,0 +1,113 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "نورت سكربت نواف اسطوري",
+   LoadingTitle = "جار تحميل",
+   LoadingSubtitle = "by ferooqs_F",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "discord.gg/4vzJMEDx", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "سكربت نواف اسطوري",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"ferooqs_F"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Home :)", nil) -- Title, Image
+local Section = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "انت شغلت سكربت",
+   Content = "رائع جدا",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "مغير سرعه",
+   Range = {0, 300},
+   Increment = 10,
+   Suffix = "سرعه",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.localPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Slider = MainTab:CreateSlider({
+   Name = "مغير قوه نط",
+   Range = {0, 300},
+   Increment = 10,
+   Suffix = "نط",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value2)
+        game.Players.localPlayer.Character.Humanoid.JumpPower = (Value2)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "راس كبير",
+   Callback = function()
+      game.Players.localPlayer.Character.Head.Size = Vector3.new(5,5,5)
+   end,
+})
+
+
+local Input = MainTab:CreateInput({
+   Name = "كلمه سر لفتح ادمن هاك",
+   PlaceholderText = "ضع كامه سر",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+         if Text == "FREE ADMIN" then
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+         end
+   end,
+})
+
+local MainTab = Window:CreateTab("Scripts", nil) -- Title, Image
+local Section = MainTab:CreateSection("Main2")
+
+local Button = MainTab:CreateButton({
+   Name = "ريدز هاب",
+   Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Slender X",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/sXPiterXs1111/SanderXV2.65/main/sanderXNewV2.65.lua'))()
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "رحمه ماب بيوت",
+   Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/err0r129/SerpenteXbetaByDefense129/main/Serpente.Scripts"))()
+   end,
+})
