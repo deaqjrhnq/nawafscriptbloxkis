@@ -87,17 +87,17 @@ local Input = MainTab:CreateInput({
    end,
 })
 
-local MainTab = Window:CreateTab("Scripts", nil) -- Title, Image
-local Section = MainTab:CreateSection("Main2")
+local ScriptTab = Window:CreateTab("Scripts", nil) -- Title, Image
+local Section = ScriptTabTab:CreateSection("Scripts")
 
-local Button = MainTab:CreateButton({
+local Button = ScriptTab:CreateButton({
    Name = "ريدز هاب",
    Callback = function()
      loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHUB"))()
    end,
 })
 
-local Button = MainTab:CreateButton({
+local Button = ScriptTab:CreateButton({
    Name = "Slender X",
    Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/sXPiterXs1111/SanderXV2.65/main/sanderXNewV2.65.lua'))()
@@ -105,9 +105,22 @@ local Button = MainTab:CreateButton({
 })
 
 
-local Button = MainTab:CreateButton({
+local Button = ScriptTab
+:CreateButton({
    Name = "رحمه ماب بيوت",
    Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/err0r129/SerpenteXbetaByDefense129/main/Serpente.Scripts"))()
+   end,
+})
+
+
+local BladeTab = Window:CreateTab("Blade Ball⚔", nil) -- Title, Image
+local Section = BladeTab:CreateSection("Blade ball")
+
+local Button = ScriptTab
+:CreateButton({
+   Name = "!Blade Ball Script!",
+   Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Blader/main/BallRoblox"))()
    end,
 })
