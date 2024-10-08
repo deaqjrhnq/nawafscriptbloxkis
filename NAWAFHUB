@@ -105,8 +105,7 @@ local Button = ScriptTab:CreateButton({
 })
 
 
-local Button = ScriptTab
-:CreateButton({
+local Button = ScriptTab:CreateButton({
    Name = "رحمه ماب بيوت",
    Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/err0r129/SerpenteXbetaByDefense129/main/Serpente.Scripts"))()
