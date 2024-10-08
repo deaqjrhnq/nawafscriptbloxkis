@@ -117,8 +117,7 @@ local Button = ScriptTab
 local BladeTab = Window:CreateTab("Blade Ball⚔", nil) -- Title, Image
 local Section = BladeTab:CreateSection("Blade ball")
 
-local Button = ScriptTab
-:CreateButton({
+local Button = BladeTab:CreateButton({
    Name = "!Blade Ball Script!",
    Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Blader/main/BallRoblox"))()
