@@ -128,7 +128,7 @@ local Section = MainScript:CreateSection("تبرع وهمي")
 local Button = MainScript:CreateButton({
    Name = "Panels",
    Callback = function()
-         if game.Placeid = 17207812212 then
+         if game.Placeid == 17207812212 then
              game.ServerScriptService.Players.SocialHandler.Panels.ContentCreator:Clone().Parent = game.Players.localPlayer.PlayerGui
          end
    end,
