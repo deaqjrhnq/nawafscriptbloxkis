@@ -6,20 +6,20 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "by ferooqs_F",
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      FolderName = "NawafHub", -- Create a custom folder for your hub/game
+      FileName = "سكربت نواف"
    },
    Discord = {
-      Enabled = true,
+      Enabled = ferooqs_F,
       Invite = "discord.gg/4vzJMEDx", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
       Title = "سكربت نواف اسطوري",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      Subtitle = "كلمه المرور,
+      Note = "ذع كلمه المرور",
+      FileName = "كلمه المرور", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"ferooqs_F"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
@@ -27,18 +27,24 @@ local Window = Rayfield:CreateWindow({
 })
 
 local MainTab = Window:CreateTab("منزل", nil) -- Title, Image
-local Section = MainTab:CreateSection("Main")
+local Section = MainTab:CreateSection("المنزل")
 
 Rayfield:Notify({
    Title = "انت شغلت سكربت",
    Content = "رائع جدا",
    Duration = 6.5,
-   Image = 4483362458,
+   Image = nil,
    Actions = { -- Notification Buttons
       Ignore = {
-         Name = "Okay!",
+         Name = "لم يعجبني",
          Callback = function()
-         print("The user tapped Okay!")
+         print("انه لايعجبه الماب")
+      end
+    },
+     Thanks = {
+        Name = "انه سكربت رائع",
+        Callback = function()
+        print("اعجبني")
       end
    },
 },
@@ -67,7 +73,7 @@ local Slider = MainTab:CreateSlider({
         game.Players.localPlayer.Character.Humanoid.JumpPower = (Value2)
    end,
 })
-
+local Section = MainTab:CreateSection("لاعب")
 local Button = MainTab:CreateButton({
    Name = "راس كبير",
    Callback = function()
@@ -80,7 +86,7 @@ local ColorPicker = MainTab:CreateColorPicker({
     Color = Color3.fromRGB(255,255,255),
     Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Maker1)
-            game.Players.localPlayer.Character.Head.Color = Color3.fromRGB(Maker1)
+            game.Players.localPlayer.Character.Head.Color = Maker1
     end
 })
 
@@ -92,18 +98,12 @@ local Input = MainTab:CreateInput({
    Callback = function(Text)
          if Text == "FREE ADMIN" then
             loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-            
-        elseif Text == "FXLY_11A" then
-            loadstring(game:HtppGet('https://pastebin.com/raw/TuJtQqxq'))()
-
-        elseif Text == "BloxyFloxy" then
-            loadstring(game:HtppGet('https://pastebin.com/b7DRxZGm'))()
         end
    end,
 })
 
-local MainScript = Window:CreateTab("Scripts", nil) -- Title, Image
-local Section = MainScript:CreateSection("Scripts")
+local MainScript = Window:CreateTab("سكربتات", nil) -- Title, Image
+local Section = MainScript:CreateSection("سكربتات")
 
 local Button = MainScript:CreateButton({
    Name = "ريدز هاب",
