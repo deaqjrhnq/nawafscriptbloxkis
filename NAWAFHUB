@@ -94,10 +94,10 @@ local Input = MainTab:CreateInput({
             loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
             
         elseif Text == "FXLY_11A" then
-            loadstring(game:HtppGet('https://pastebin.com/raw/TuJtQqxq')
+            loadstring(game:HtppGet('https://pastebin.com/raw/TuJtQqxq'))()
 
         elseif Text == "BloxyFloxy" then
-            loadstring(game:HtppGet('https://pastebin.com/b7DRxZGm'))
+            loadstring(game:HtppGet('https://pastebin.com/b7DRxZGm'))()
         end
    end,
 })
